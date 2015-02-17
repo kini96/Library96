@@ -1,0 +1,44 @@
+.container
+	.well
+		form.form-horizontal(name="addBookForm")
+			fieldset 
+				legend Add New Book
+				.form-group
+					label.col-md-2.control-label(for="name") Book Name
+					.col-md-10
+						input.form-control(type="text", placeholder="Book Name", ng-model="book.name", required)
+				.form-group
+					label.col-md-2.control-label(for="genres") Genre
+					.col-md-10
+						input.form-control(type="text", placeholder="genre", ng-model="book.genre", required)
+				.form-group
+					label.col-md-2.control-label(for="image") Image Url
+					.col-md-10
+						input.form-control(type="text", placeholder="URL", ng-model="book.url", required)
+				.form-group
+					label.col-md-2.control-label(for="author") Author
+					.col-md-10
+						input.form-control(type="text", placeholder="Author", ng-model="book.author", required)
+				.form-group
+					label.col-md-2.control-label(for="published") Published
+					.col-md-10
+						input.form-control(type="text", placeholder="published", ng-model="book.published", required)
+				.form-group
+					label.col-md-2.control-label(for="publishers") Publishers
+					.col-md-10
+						input.form-control(type="text", placeholder="publishers", ng-model="book.publishers", required)
+				.form-group
+					label.col-md-2.control-label(for="pages") Pages
+					.col-md-10
+						input.form-control(type="text", placeholder="pages", ng-model="book.pages", required)
+				.form-group
+					label.col-md-2.control-label(for="ISBN") ISBN
+					.col-md-10
+						input.form-control(type="text", placeholder="ISBN", ng-model="book.isbn", required)
+				.form-group
+					label.col-md-2.control-label(for="description") Description
+					.col-md-10
+						input.form-control(type="text", placeholder="description", ng-model="book.description", required)
+				.pull-right
+					button.btn.btn-primary(ng-click="addbook(book)", ng-disabled="addBookForm.$invalid") Add
+					a.btn.btn-primary(href="#/") Cancel
