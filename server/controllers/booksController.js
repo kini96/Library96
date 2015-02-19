@@ -1,5 +1,6 @@
 var Book = require('mongoose').model('Book');
 
+
 module.exports = {
 	newBooks: function(req, res, next) {
 		var newBookData = req.body;

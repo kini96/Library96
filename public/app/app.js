@@ -32,9 +32,14 @@ var routeUserChecks = {
 			resolve: routeUserChecks.adminRole
 		})
 		.when('/addBook', {
+<<<<<<< HEAD
 			templateUrl: '/partial/books/addBook',
 			controller: 'AddBookCtrl',
 			resolve: routeUserChecks.adminRole
+=======
+			templateUrl: '/partial/account/addBook',
+			controller: 'AddBookCtrl'
+>>>>>>> b953fced9d2c96b483027e244e85908c2effbdb3
 		})
 		
 });
