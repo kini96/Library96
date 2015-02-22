@@ -26,20 +26,19 @@ var routeUserChecks = {
 			templateUrl: '/partial/books/books-list',
 			controller: 'BooksListCtrl'
 		})
+		.when('/books/id', {
+			templateUrl: '/partial/books/book-details',
+			controller: 'BooksDetailsCtrl'
+		})
 		.when('/admin/users', {
 			templateUrl: '/partial/admin/users-list',
 			controller: 'UserListCtrl',
 			resolve: routeUserChecks.adminRole
 		})
 		.when('/addBook', {
-<<<<<<< HEAD
 			templateUrl: '/partial/books/addBook',
 			controller: 'AddBookCtrl',
 			resolve: routeUserChecks.adminRole
-=======
-			templateUrl: '/partial/account/addBook',
-			controller: 'AddBookCtrl'
->>>>>>> b953fced9d2c96b483027e244e85908c2effbdb3
 		})
 		
 });

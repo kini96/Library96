@@ -1,7 +1,7 @@
-h2 Book Gallery
-div(ng-repeat="book in books | orderBy: '-published' | limitTo: 10")
-	.row
-		.col-md-3
-			| {{ book.published | date: 'MMM d yyyy' }}
-		.col-md-9
-			a(href="#/books/{{ book._id }}") {{ book.name }}
+div(ng-repeat="book in books | orderBy: '-published' | limitTo:8")
+	div.col-md-3
+		a(href="#/books/{{book._id}}", class="thumbnail plain")
+			img(src="{{book.img}}")
+			h5 "{{book.name}}"
+			p Издадена: {{ book.published | date: 'MMM d yyyy' }}
+			| Жанр: {{book.genres}}

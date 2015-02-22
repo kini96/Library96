@@ -20,6 +20,7 @@ module.exports = function(app) {
 
 	app.post('/api/books', auth.isInRole('admin'), controllers.books.newBooks);
 	app.get('/api/books', controllers.books.getAllBooks);
+	app.get('/api/books/:id', controllers.books.getBookById);
 	
 	app.get('/partial/:partialArea/:partialName', function(req, res){
     	res.render('../../public/app/' + req.params.partialArea + '/' + req.params.partialName)

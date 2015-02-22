@@ -24,7 +24,11 @@ footer p {
 form.form-inline div.form-group {
   margin-right: 10px;
 }
-img.gallery {
-  width: 284px;
-  height: 213px;
+a.thumbnail.plain {
+  height: 270px;
+  width: 234px;
+}
+a.thumbnail.plain img {
+  height: 150px;
+  width: 125px;
 }

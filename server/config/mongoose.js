@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-	crypto = require('crypto');
+	crypto = require('crypto'),
 	book = require('../models/Book');
 
 module.exports = function(config) {

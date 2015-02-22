@@ -1,8 +1,23 @@
 .container
-	table.table
-		tr
-			th Title
-			th Published
-		tr(ng-repeat="book in books")
-			td {{book.name}}
-			td {{book.genres}}
+	div.row
+		.col-md-2 
+			h4 Search
+		.col-md-4
+			input.form-control(ng-model="search", type="text", placeholder="Search") 
+		.col-md-2 
+			h4 Sort
+		.col-md-4
+			select.form-control(ng-model="sort")
+				option(value=" ") Default
+				option(value="name") Name
+				option(value="genres") Genre
+	br
+	div.row
+		div.col-md-3(ng-repeat="book in books | filter: search | orderBy: sort")
+			div(id="content", class="span12")
+					div.thumbnails
+							a(href="#/books/{{ book._id }}", class="thumbnail plain", style="text-align:center")
+								img(src="{{book.img}}")
+								h5 {{book.name}}
+								p Автор: {{book.author}}
+								p Жанр: {{book.genres}}
