@@ -1,6 +1,6 @@
-app.factory('addbooks', function($http, $q, BookResource) {
+app.factory('addBook', function($http, $q, BookResource) {
 	return {
-		addbooks: function(book) {
+		addbook: function(book) {
 			var deferred = $q.defer();
 
 			var book = new BookResource(book);
@@ -13,4 +13,4 @@ app.factory('addbooks', function($http, $q, BookResource) {
 			return deferred.promise;
 		}
 	}
-})
+});
