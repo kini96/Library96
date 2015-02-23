@@ -1,15 +1,15 @@
 var mongoose = require('mongoose');
 
 var booksSchema = mongoose.Schema({
-    name: { type: String, require: '{PATH} is required' },
-    author: { type: String, require: '{PATH} is required' },
-    img: { type: String, require: '{PATH} is required' },
-    publishers: { type: String, require: '{PATH} is required' },
-    pages: { type: String, require: '{PATH} is required' },
-    ISBN: { type: String, require: '{PATH} is required' },
-    description: { type: String, require: '{PATH} is required' },
-    published: { type: Date, require: '{PATH} is required' },
-    genres: { type: String, require: '{PATH} is required' },
+    name: String,
+    author: String,
+    img: String,
+    publishers: String,
+    pages: String,
+    ISBN: String,
+    description: String,
+    published: Date,
+    genres: String
 });
 
 var Book = mongoose.model('Book', booksSchema);
