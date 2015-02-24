@@ -1,0 +1,7 @@
+div(ng-repeat="book in books | orderBy: '-published' | limitTo:8")
+	div.col-md-3
+		a(href="#/books/{{book._id}}", class="thumbnail plain")
+			img(src="{{book.img}}")
+			h5 "{{book.name}}"
+			p Издадена: {{ book.published | date: 'MMM d yyyy' }}
+			| Жанр: {{book.genres}}

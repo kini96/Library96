@@ -1,0 +1,5 @@
+.container
+	h2 {{book.name}}
+	p {{book.published | date}}
+	ul
+		li(ng-repeat="genre in book.genres") {{genre}}
