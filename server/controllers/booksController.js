@@ -4,7 +4,6 @@ var Book = require('mongoose').model('Book');
 module.exports = {
 	newBooks: function(req, res, next) {
 		var newBookData = req.body;
-        console.log('creating');
         Book.create(newBookData, function(err, book) {
             if (err) {
                 console.log('Failed to register new book: ' + err);

@@ -9,14 +9,11 @@ module.exports = {
 			}
 
 			req.logIn(user, function(err) {
-				console.log(1);
-				console.log(err);
+
 				if (err) return next(err);
 				res.send({success: true, user: user});
 			})
 		});
-
-		console.log(req.user);
 
 		auth(req, res, next);
 	},
@@ -43,6 +40,10 @@ module.exports = {
 			}
 			else {
 				console.log('123');
+			if (req.isAuthenticated() && req.user.roles.indexOf(role) > -1) {
+			next();
+			}
+			else {
 				res.status(403);
 				res.end();
 			}	

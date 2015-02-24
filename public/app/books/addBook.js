@@ -4,8 +4,7 @@ app.factory('addBook', function($http, $q, BookResource) {
 			var deferred = $q.defer();
 
 			var book = new BookResource(book);
-			book.$save().then(function() {
-				console.log(3);
+			book.$save().then(function() {	
 				deferred.resolve();
 			}, function(response) {
 				console.log(response);
