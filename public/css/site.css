@@ -32,3 +32,11 @@ a.thumbnail.plain img {
   height: 150px;
   width: 125px;
 }
+div.col-md-6.image-container img {
+  height: 500px;
+  widht: 396px;
+}
+div.img {
+  margin-left: 100px;
+  margin-top: 70px;
+}

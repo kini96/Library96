@@ -1,5 +1,29 @@
-.container
-	h2 {{book.name}}
-	p {{book.published | date}}
-	ul
-		li(ng-repeat="genre in book.genres") {{genre}}
+.container.clearfix
+	div(class="row jumbotron")
+		div.col-md-6
+			h2.text-center {{book.name}}
+			h3
+				strong Author:
+				span.pull-right {{book.author}}
+			div
+				p
+					strong Genre:
+					span.pull-right {{book.genres}}
+				p
+					strong Publishers:
+					span.pull-right {{book.publishers}}
+				p
+					strong Published:
+					span.pull-right {{ book.published | date: 'MMM d yyyy' }}
+				p
+					strong Pages:
+					span.pull-right {{book.pages}}
+				p
+					strong ISBN:
+					span.pull-right {{book.ISBN}}
+				p
+					strong Description:
+					span.pull-right {{book.description}}
+		div.col-md-6.image-container
+			div.img
+				img(alt="{{book.name}}" src="{{book.img}}")
