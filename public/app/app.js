@@ -30,11 +30,6 @@ var routeUserChecks = {
 			templateUrl: '/partial/books/book-details',
 			controller: 'BooksDetailsCtrl'
 		})
-		.when('/admin/users', {
-			templateUrl: '/partial/admin/users-list',
-			controller: 'UserListCtrl',
-			resolve: routeUserChecks.adminRole
-		})
 		.when('/addBook', {
 			templateUrl: '/partial/books/addBook',
 			controller: 'AddBookCtrl',

@@ -9,7 +9,11 @@ module.exports = {
                 console.log('Failed to register new book: ' + err);
                 return;
             }
+            else {
+                console.log('The book is added!');
+            }
         })
+        res.send();
 	},
 
 	getAllBooks: function(req, res, next) {
